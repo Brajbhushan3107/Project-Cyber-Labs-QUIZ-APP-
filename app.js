@@ -32,7 +32,11 @@ function loadQuiz() {
      </div>
      <div>
       <p>Question 2: What is the value of log100 ?</p>
-      <input type="radio" name="q2" value="1">1   <input type="radio" name="q2" value="2"> 2 <input type="radio" name="q2" value="3">3<input type="radio" name="q2" value="4"> 4
+      <input type="radio" name="q2" value="1">1  
+       <input type="radio" name="q2" value="2"> 2
+        <input type="radio" name="q2" value="3">3
+        <input type="radio" name="q2" value="4"> 4
+        
       <p>Question 3: What is the fullform of HTML?</p>
       <input type="text" name="q2" placeholder="Write full form"> 
       </div> `;
@@ -42,8 +46,9 @@ function submitQuiz() {
     const answers = {
         q1: document.querySelector('input[name="q1"]:checked').value,
         q2: document.querySelector('input[name="q2"]:checked').value,
+        q3: document.querySelector('input[name="q3"]:checked').placeholder,
     };
-    let score =0;
+    let score = 0;
     if (answers.q1 === '15') score++;
     if (answers.q2 === '2') score++;
     if (answers.q3 === 'Hyper Text Markup Language') score++;
@@ -52,6 +57,6 @@ function submitQuiz() {
     alert('Quiz submitted successfully!');
 }
 
-    
+
 //  Javascipt of updating leaderboard  remaining by tonight .
 // i'll try to complete it in preceding days.
