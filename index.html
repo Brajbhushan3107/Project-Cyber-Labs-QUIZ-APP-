@@ -10,21 +10,32 @@
 
 <body>
     <div id="app">
-        <h1>Quiz App</h1>
-        <div id="auth">
-            <input type="text" id="username" placeholder="Username">
-            <input type="password" id="password" placeholder="Password">
+        <header>
+            <h1>Quiz App</h1>
+            <nav>
+                <ul>
+                    <li><a href="#auth">Login/Register</a></li>
+                    <li><a href="#quiz-section">Quizzes</a></li>
+                    <li><a href="#leaderboard">Leaderboard</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="auth">
+            <h2>Login/Register</h2>
+            <input type="text" id="username" placeholder="Enter Username">
+            <input type="password" id="password" placeholder="Enter Password">
             <button onclick="login()">Login</button>
             <button onclick="register()">Register</button>
-        </div>
-        <div id="quiz-section" style="display:none;">
-            <h2 id="quiz-title"></h2>
-            <div id="questions"></div> <button onclick="submitQuiz()">Submit Quiz</button>
-        </div>
-        <div id="leaderboard" style="display:none;">
+        </section>
+        <section id="quiz-section" style="display:none;">
+            <h2 id="quiz-title">Quizzes</h2>
+            <div id="questions"></div>
+            <button onclick="submitQuiz()">Submit Quiz</button>
+        </section>
+        <section id="leaderboard" style="display:none;">
             <h2>Leaderboard</h2>
             <ul id="leaderboard-list"></ul>
-        </div>
+        </section>
     </div>
     <script src="app.js"></script>
 </body>
